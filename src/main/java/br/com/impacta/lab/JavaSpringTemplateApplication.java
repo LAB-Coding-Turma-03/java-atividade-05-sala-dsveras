@@ -36,14 +36,29 @@ public class JavaSpringTemplateApplication {
 		 * 
 		 */
 		
-		Produto produto = new Produto();
-		produto.codigo = 1;
-		produto.descricao = "Camisa";
-		produto.valor = 70.00;
-		
-		String resumo = produto.montarResumo(produto);
-		
+		Produto camisa = new Produto(1, "camisa", 70.00);
+		Produto shorts = new Produto(2, "shorts", 57.50);
+		Produto meia = new Produto(3, "meia", 9.99);
+		Produto toca = new Produto(4, "toca", 35.00);
+		Produto luvas = new Produto(5, "toca", 19.50);
+
+		String resumo = camisa.montarResumo();
 		System.out.println(resumo);
+
+		resumo = shorts.montarResumo();
+		System.out.println(resumo);
+		
+		resumo = meia.montarResumo();
+		System.out.println(resumo);
+
+		resumo = toca.montarResumo();
+		System.out.println(resumo);
+
+		resumo = luvas.montarResumo();
+		System.out.println(resumo);
+
+		//String resumo = produto.montarResumo(produto);
+		//System.out.println(resumo);
 	}
 
 }
